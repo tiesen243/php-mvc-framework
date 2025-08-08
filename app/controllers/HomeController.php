@@ -2,13 +2,15 @@
 
 namespace App\controllers;
 
+use Yuki\core\Controller;
 use Yuki\http\Response;
 
-class HomeController
+class HomeController extends Controller
 {
   public function index(): Response
   {
-    $content = 'dsadsads';
-    return new Response($content);
+    return $this->render('index', [
+      'title' => 'cac lo',
+    ]);
   }
 }
