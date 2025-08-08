@@ -20,4 +20,18 @@ class PostController extends Controller
       'title' => 'Post ' . $id,
     ]);
   }
+
+  public function create(): Response
+  {
+    return $this->render('posts/create', [
+      'title' => 'Create Post',
+    ]);
+  }
+
+  public function store(): void
+  {
+    echo '<pre>';
+    print_r($this->request->body());
+    echo '</pre>';
+  }
 }

@@ -7,6 +7,9 @@ define('BASE_PATH', dirname(__DIR__));
 
 require_once BASE_PATH . '/vendor/autoload.php';
 
+require_once BASE_PATH . '/src/configs/env.php';
+loadEnv(__DIR__ . '/../.env');
+
 $request = Request::create();
 
 $kernel = new Kernel();

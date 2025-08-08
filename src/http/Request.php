@@ -38,4 +38,9 @@ class Request
       'uri' => $this->server['REQUEST_URI'] ?? '/',
     ];
   }
+
+  public function body(): array
+  {
+    return $this->post;
+  }
 }

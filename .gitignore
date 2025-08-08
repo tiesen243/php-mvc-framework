@@ -23,6 +23,9 @@ composer.lock
 dist/
 build/
 
+# MySQL
+docker/mysql/
+
 # Testing
 coverage/
 .phpunit.result.cache
