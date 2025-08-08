@@ -1,4 +1,9 @@
 {
+  "type": "module",
+  "scripts": {
+    "format": "prettier --check **/**/*.{js,php,css} --cache --cache-location .cache/prettiercache",
+    "format:fix": "prettier --check **/**/*.{js,php,css} --write --cache --cache-location .cache/prettiercache"
+  },
   "dependencies": {},
   "devDependencies": {
     "@prettier/plugin-php": "^0.24.0",

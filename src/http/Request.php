@@ -1,6 +1,6 @@
 <?php
 
-namespace App\http;
+namespace Yuki\http;
 
 class Request
 {
@@ -29,5 +29,13 @@ class Request
     }
 
     return self::$instance;
+  }
+
+  public function getRequestInfo(): array
+  {
+    return [
+      'method' => $this->server['REQUEST_METHOD'] ?? 'GET',
+      'uri' => $this->server['REQUEST_URI'] ?? '/',
+    ];
   }
 }
