@@ -24,7 +24,6 @@ dist/
 build/
 
 # MySQL
-docker/mysql/
 
 # Testing
 coverage/
