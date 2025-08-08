@@ -1,8 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "format": "prettier --check **/**/*.{js,php,css} --cache --cache-location .cache/prettiercache",
-    "format:fix": "prettier --check **/**/*.{js,php,css} --write --cache --cache-location .cache/prettiercache"
+    "format": "prettier --check **/**/*.{css,html,js,php} --write --cache --cache-location .cache/prettiercache"
   },
   "dependencies": {},
   "devDependencies": {
