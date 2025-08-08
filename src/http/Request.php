@@ -33,9 +33,11 @@ class Request
 
   public function getRequestInfo(): array
   {
+    $uri = $this->server['PATH_INFO'] ?? '/';
+
     return [
       'method' => $this->server['REQUEST_METHOD'] ?? 'GET',
-      'uri' => $this->server['REQUEST_URI'] ?? '/',
+      'uri' => $uri === '/' ? '/' : rtrim($uri, '/'),
     ];
   }
 

@@ -20,6 +20,12 @@ class Controller
     extract($vars);
     require $templatePath;
     $content = ob_get_clean();
+
+    ob_start();
+    extract(array_merge($vars, ['content' => $content]));
+    require BASE_PATH . '/app/views/_layout.html';
+    $content = ob_get_clean();
+
     return new Response($content);
   }
 

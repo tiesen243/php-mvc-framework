@@ -9,8 +9,6 @@ class HomeController extends Controller
 {
   public function index(): Response
   {
-    return $this->render('index', [
-      'title' => 'cac lo',
-    ]);
+    return $this->render('index');
   }
 }
