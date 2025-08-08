@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Generated/Compiled files
+public/css/globals.css
+
+# PHP specific
+*.log
+*.tmp
+*.temp
+*.cache
+
+# Composer
+composer.phar
+composer.lock
+
+# Environment files
+.env*
+!.env.example
+
+# Build artifacts
+dist/
+build/
+
+# Testing
+coverage/
+.phpunit.result.cache
