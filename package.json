@@ -1,10 +1,12 @@
 {
   "type": "module",
   "scripts": {
+    "dev": "concurrently \"npm run dev:app\" \"npm run dev:tailwind\"",
     "dev:app": "php -S localhost:8000 -t public",
     "dev:tailwind": "tailwindcss -i src/styles/globals.css -o public/css/globals.css --watch",
-    "dev": "concurrently \"npm run dev:app\" \"npm run dev:tailwind\"",
-    "format": "prettier --check **/**/*.{css,html,js,php} --write --cache --cache-location .cache/prettiercache"
+    "format": "prettier --check **/**/*.{css,html,js,php} --cache --cache-location .cache/prettiercache",
+    "format:fix": "prettier --check **/**/*.{css,html,js,php} --write --cache --cache-location .cache/prettiercache",
+    "postinstall": "ln -sf ../../node_modules/vue/dist/vue.global.prod.js public/js/vue.js"
   },
   "dependencies": {
     "vue": "^3.5.18"
