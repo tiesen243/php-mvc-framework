@@ -13,6 +13,8 @@
     "nikic/fast-route": "^1.3"
   },
   "scripts": {
-    "dev": "php -S localhost:8000 -t public & node_modules/.bin/tailwindcss -i src/styles/globals.css -o public/css/globals.css --watch"
+    "dev:app": "php -S localhost:8000 -t public",
+    "dev:tailwind": "node_modules/.bin/tailwindcss -i src/styles/globals.css -o public/css/globals.css --watch",
+    "dev": "node_modules/.bin/concurrently \"composer dev:app\" \"composer dev:tailwind\""
   }
 }

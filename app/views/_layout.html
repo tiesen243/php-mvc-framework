@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?= $title ?? 'PHP MVC' ?></title>
     <link href="/css/globals.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title><?= $title ?? 'PHP MVC' ?></title>
+    <meta
+      name="description"
+      content="<?= $description ?? 'PHP MVC Application' ?>"
+    />
+
+    <script src="/js/vue.js"></script>
   </head>
 
   <body>

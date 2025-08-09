@@ -1,12 +1,18 @@
 {
   "type": "module",
   "scripts": {
+    "dev:app": "php -S localhost:8000 -t public",
+    "dev:tailwind": "tailwindcss -i src/styles/globals.css -o public/css/globals.css --watch",
+    "dev": "concurrently \"npm run dev:app\" \"npm run dev:tailwind\"",
     "format": "prettier --check **/**/*.{css,html,js,php} --write --cache --cache-location .cache/prettiercache"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^3.5.18"
+  },
   "devDependencies": {
     "@prettier/plugin-php": "^0.24.0",
     "@tailwindcss/cli": "^4.1.11",
+    "concurrently": "^9.2.0",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4.1.11",

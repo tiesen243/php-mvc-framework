@@ -4,6 +4,7 @@ vendor/
 
 # Generated/Compiled files
 public/css/globals.css
+public/js/vue.js
 
 # PHP specific
 *.log
